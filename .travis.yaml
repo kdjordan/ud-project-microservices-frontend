@@ -17,7 +17,7 @@ before_script:
 script:
  - docker --version # print the version for logging
  - docker build -t udagram-microservices-fe .
- - docker tag udagram-microservices-fe kdjordan/udagram-microservices-felatest
+ - docker tag udagram-microservices-fe kdjordan/udagram-microservices-fe:latest
 
 after_success:
  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
