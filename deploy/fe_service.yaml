@@ -3,16 +3,16 @@ kind: Service
 metadata:
   labels:
     app: fe
-  name: f2-svc
+  name: fe-svc
   namespace: default
-  selfLink: /api/v1/namespaces/default/services/f2-svc
+  selfLink: /api/v1/namespaces/default/services/fe-svc
 spec:
   ports:
   - port: 80
     protocol: http
     targetPort: 80
   selector:
-    app: f2
+    app: fe
   sessionAffinity: None
   type: ClusterIP
 status:
