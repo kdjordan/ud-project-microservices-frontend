@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: fe
+  name: f2-svc
+  namespace: default
+  selfLink: /api/v1/namespaces/default/services/f2-svc
+spec:
+  ports:
+  - port: 80
+    protocol: http
+    targetPort: 80
+  selector:
+    app: f2
+  sessionAffinity: None
+  type: ClusterIP
+status:
+  loadBalancer: {}
